@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Елена](https://up.htmlacademy.ru/htmlcss/27/user/1010821).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова](https://htmlacademy.ru/profile/lizzy).
 
 ---
 
