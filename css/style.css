@@ -280,8 +280,11 @@ a {
     background-color: #F6B5A5;
 }
 .current {
-    color: #ffffff;
     background-color: #D07058;
+    cursor: auto;
+}
+.current a {
+    color: #ffffff;
 }
 .menu-dropdown:hover .submenu {
     display: block;
@@ -537,7 +540,7 @@ a {
 }
 .advantage-item {
     display: flex;
-    margin-bottom: 11px;
+    margin-bottom: 9px;
 }
 .advantages h2 {
     font-size: 24px;
@@ -585,7 +588,7 @@ a {
     text-decoration: underline;
 }
 .service a:hover, .service a:focus, .service a:active {
-    color: #FFBC9E;
+    color: #e84d37;
 }
 .mailing {
     color: #5a5a5a;
@@ -667,14 +670,15 @@ a {
     transform: translateY(-50%);
     margin: 0;
     width: 301px;
-    min-height: 305px;
-    padding: 10px 24px;
+    max-height: 305px;
+    padding: 10px 25px 30px;
     color: #323232;
     background-color: #ffffff;
     border-radius: 15px;
     font-size: 14px;
     line-height: 20px;
     font-weight: bold;
+    overflow-Y: auto;
 }
 .pop-up-feedback-modal {
     display: none;
@@ -830,9 +834,10 @@ a {
     padding-top: 0;
 }
 .feedback-button {
+    text-align: center;
     font-size: 18px;
     line-height: 24px;
-    padding: 10px 23px;
+    padding: 10px 20px;
     margin-top: 23px;
 }
 /* Каталог */
@@ -840,16 +845,20 @@ a {
     margin: 13px 0 35px;
     letter-spacing: 2px;
 }
-.ice-card {
+.ice-card, .catalog-card {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.catalog-card-item {
+    margin-bottom: 35px;
+}
 .item-name {
-    position: absolute;
+    position: relative;
     max-width: 255px;
     margin: 0;
     padding: 0;
@@ -870,7 +879,6 @@ a {
     position: relative;
     width: 267px;
     text-align: center;
-    margin-bottom: 80px;
 }
 .quick-view {
     display: none;
@@ -880,11 +888,14 @@ a {
     border-radius: 5px;
     min-height: 390px;
     padding: 10px 12px;
-    width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
     top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
     z-index: 10;
+    -ms-scroll-limit: 0 0 0 0;
+    overflow-x: hidden;
 }
 .quick-view-button {
     position: absolute;
@@ -898,11 +909,10 @@ a {
     transform: translate(-50%);
     min-width: 203px;
 }
-/* .quick-view-button:hover, .quick-view-button:focus, .quick-view-button:active {
-    color: #ffffff;
+.ice-card-item {
+    margin-bottom: 0;
 }
-*/
-.ice-card li:hover .quick-view {
+.ice-card-item:hover .quick-view {
     display: block;
     height: calc(100% + 65px);
 }
@@ -912,7 +922,6 @@ a {
 }
 .hits li {
     position: relative;
-    margin-bottom: 80px;
 }
 .hits li::before {
     position: absolute;
@@ -947,7 +956,7 @@ a {
     justify-content: flex-end;
     list-style: none;
     padding: 0;
-    margin: 44px -8px 30px 0;
+    margin: 80px -8px 30px 0;
 }
 .pagination li {
     margin-left: 5px;
@@ -971,6 +980,9 @@ a {
 a.active, .pagination a:active {
     color: #323232;
     background-color: #ffffff;
+}
+.pagination span {
+    opacity: 0;
 }
 .prev {
     opacity: 0.2;
@@ -1033,7 +1045,7 @@ a.active, .pagination a:active {
     -moz-appearance: none;
     appearance: none;
 }
-.range-legend input[type='number'] {
+.range-legend input[type="number"] {
     -moz-appearance: textfield;
 }
 .max-price, .min-price {
@@ -1201,15 +1213,14 @@ a.active, .pagination a:active {
 .footer {
     width: 1146px;
     margin: 0 auto;
-    padding: 0 27px;
-    min-height: 100px;
+    padding: 15px 27px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 .footer-social {
-    margin-top: 8px;
+    margin-top: -5px;
 }
 .footer-social ul {
     display: flex;
@@ -1259,7 +1270,6 @@ a.active, .pagination a:active {
 .footer-menu {
     width: 350px;
     margin-left: 40px;
-    margin-top: 10px;
 }
 .footer-menu ul {
     display: flex;
@@ -1284,7 +1294,7 @@ a.active, .pagination a:active {
     border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 .copyright-logo {
-    margin-bottom: 0;
+    margin-bottom: 1px;
 }
 .copyright-logo:hover path, .copyright-logo:focus path, .copyright-logo:active path {
     fill: #FFBC9E;
@@ -1310,5 +1320,5 @@ a.active, .pagination a:active {
     font-size: 12px;
     line-height: 16px;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }

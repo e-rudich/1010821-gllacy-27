@@ -25,7 +25,7 @@ form.addEventListener("submit", function (evt) {
         form.offsetWidth = form.offsetWidth;
         form.classList.add("feedback-error");
     }
-  });
+});
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
